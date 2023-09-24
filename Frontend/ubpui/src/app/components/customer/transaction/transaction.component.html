@@ -1,0 +1,39 @@
+  
+<div class="container mt-5">
+    <h2>Transactions for Customer ID: {{ customerId }}</h2>
+  
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Transaction ID</th>
+          <th>Date</th>
+          <th>Amount</th>
+          <th>Discount Amount</th>
+          <th>Final Amount</th>
+          <th>Paid in Currency</th>
+          <th>Paid Online</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let trans of transaction">
+          <td>{{ trans.paymentId }}</td>
+          <td>{{ trans.paymentDate | date }}</td>
+          <td>{{ trans.amount }}</td>
+          <td>{{ trans.discountAmount }}</td>
+          <td>{{ trans.finalAmount }}</td>
+          <td>
+            <span [class]="trans.paidCurrency ? 'badge badge-success' : 'badge badge-danger'">
+              {{ trans.paidCurrency ? 'Yes' : 'No' }}
+            </span>
+          </td>
+          <td>
+            <span [class]="trans.paidinOnline ? 'badge badge-success' : 'badge badge-danger'">
+              {{ trans.paidinOnline ? 'Yes' : 'No' }}
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+

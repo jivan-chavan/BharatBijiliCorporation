@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="modal-header">
+      <h4 class="modal-title">Cash Payment</h4>
+      <button type="button" class="close" aria-label="Close" (click)="bsModalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <h5>Customer Details</h5>
+        <table class="table table-bordered">
+          <tbody>
+            <tr>
+              <th scope="row">Customer ID</th>
+              <td>{{ customerDetails.customerId }}</td>
+            </tr>
+            <tr>
+              <th scope="row">Name</th>
+              <td>{{ customerDetails.customerName }}</td>
+            </tr>
+            <tr>
+              <th scope="row">Address</th>
+              <td>{{ customerDetails.address }}</td>
+            </tr>
+            <tr>
+                <th scope="row">Unit Consumed</th>
+                <td>{{ bill.unitConsumed }}</td>
+              </tr>
+              <tr>
+                <th scope="row">Bill Amount</th>
+                <td>{{ bill.billAmount }}</td>
+              </tr>
+              <tr>
+                <th scope="row">Bill Duration</th>
+                <td>{{ bill.billDuration | date }}</td>
+              </tr>
+              <tr>
+                <th scope="row">Due Date</th>
+                <td>{{ bill.dueDate | date }}</td>
+              </tr>          </tbody>
+        </table>
+    
+        </div>
+    <div class="modal-footer">
+       <button type="button" class="btn btn-primary" (click)="onPay()">Pay</button>
+      <button type="button" class="btn btn-secondary" (click)="bsModalRef.hide()">Cancel       
+      </button>
+    </div>
+  </div>
+  

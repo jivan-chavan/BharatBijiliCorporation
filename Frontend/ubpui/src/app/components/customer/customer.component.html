@@ -1,0 +1,41 @@
+<!-- src/app/customer-list.component.html -->
+
+<div class="container mt-5">
+
+  <div class="container">
+   
+    <div class="form-group">
+      <label for="fileInput">Add Bills:</label>
+      <input type="file" class="form-control-file" id="fileInput" (change)="onFileSelected($event)">
+    </div>
+    <button class="btn btn-primary" (click)="uploadFile()">Upload</button>
+  </div>
+  <h2>Customer List</h2>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Customer ID</th>
+        <th>OTP</th>
+        <th>Phone Number</th>
+        <th>Address</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let customer of customers">
+        <td>{{ customer.customerName }}</td>
+        <td>{{ customer.email }}</td>
+        <td>{{ customer.customerId }}</td>
+        <td>{{ customer.otp }}</td>
+        <td>{{ customer.phoneNumber }}</td>
+        <td>{{ customer.address }}</td>           
+              <td>
+                <a [routerLink]="['customerdetails', customer.customerId]">View</a>
+              </td>           
+      </tr>
+    </tbody>
+  </table>
+</div>
