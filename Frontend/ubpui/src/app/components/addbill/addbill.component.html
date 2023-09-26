@@ -1,0 +1,18 @@
+<div class="container mt-5">
+    <h2>Add Bill</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="unitConsumed">Unit Consumed</label>
+        <input type="number" class="form-control" id="unitConsumed" [(ngModel)]="bill.unitConsumed" name="unitConsumed" required>
+      </div>
+      <div class="form-group">
+        <label for="dueDate">Due Date</label>
+        <input type="date" class="form-control" id="dueDate" [(ngModel)]="bill.dueDate" name="dueDate" required>
+      </div> 
+  
+      <button type="submit" class="btn btn-primary">Submit</button>
+      &nbsp;
+      <button type="submit" class="btn btn-primary" (click)="onCancel()" >Cancel</button>
+    </form>
+  </div>
+  
