@@ -1,5 +1,7 @@
 # BharatBijiliCorporation
  BBC - Utility Bill Pay
+
+ 
 User Guide for Bharat Bijili Corporation- Utility Billing Application:
 
 -> User(employee of company) must have registered with valid email id
@@ -9,10 +11,18 @@ User Guide for Bharat Bijili Corporation- Utility Billing Application:
 
 -> By entering Correct OTP, user log in.
 
--> On homepage he will able to see all the customers,
+->On homepage, there is choose file option to upload CSV file of Bill(so user can upload bill in bulk).
+
+-> on same page ,there is button- add customer by which user can add customer.
+
+-> On homepage, user will able to see all the customers,
 by clicking on view Action, he can see the details of that customer.
 
--> On customer detail, user can see two button , one button for all bills and second button is for all transactions of that particular customer.
+-> On customer detail, user can see three button ,
+- one button is view bills to see all bills 
+- second button is for all transactions 
+- third one is for adding bill of that particular customer.
+
 
 ->By clicking on View Bill, User can see all details of bills of customer.
 
